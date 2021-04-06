@@ -21,8 +21,3 @@ input{
     top: 10%;
     overflow-x: auto;
 }
-
-#invalid{
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-}

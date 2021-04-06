@@ -19,7 +19,7 @@
         <img class="watermark" src="images/watermark.png">
             <div class = login_register_wrapper>
                 <form class = "centered" style="width: 40%" method="POST">
-                    <input type="text"  placeholder="Username" name="input_username" required>
+                    <input type="text" autocomplete="off" placeholder="Username" name="input_username" required>
                     <input type="password" placeholder="Password" name="input_password" required>
 
                     <!-- TODO: validate password -->

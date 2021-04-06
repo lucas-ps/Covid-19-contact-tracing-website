@@ -19,9 +19,9 @@
         <img class="watermark" src="images/watermark.png">
         <div class = login_register_wrapper>
             <form class = "centered" style="width: 40%" method="POST">
-                <input type="text"  placeholder="First Name" name="input_fname" required >
-                <input type="text" placeholder="Surname" name="input_sname" required >
-                <input type="text"  placeholder="Username" name="input_username" required >
+                <input type="text" autocomplete="off" placeholder="First Name" name="input_fname" required >
+                <input type="text" autocomplete="off" placeholder="Surname" name="input_sname" required >
+                <input type="text" autocomplete="off" placeholder="Username" name="input_username" required >
                 <input type="password" placeholder="Password" name="input_password" required >
 
                 <br><br><br>
@@ -35,4 +35,33 @@
 
 </body>
 
-// TODO: Register page
+<?php
+// Function used for logging to console
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    session_start();
+    $fname = $_POST['input_fname'];
+    $sname = $_POST['input_sname'];
+    $username = $_POST['input_username'];
+    $password = $_POST['input_password'];
+    // TODO: Use password_hash() to store password securely
+
+    $db = file_get_contents("data.json");
+    $data = json_decode($db, true);
+    //$users = $data["users"];
+    $new_user = array("first_name"=>$fname, "surname"=>$sname, "username"=>$username, "password"=>$password);
+    array_push($data["users"], $new_user);
+    $json = json_encode($data);
+    file_put_contents("data.json", $json);
+    console_log($data);
+
+    // Logging user in after successful account creation
+    $_SESSION['username'] = $username;
+    header('Location: ./home.php');
+}
+?>
