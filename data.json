@@ -1,0 +1,43 @@
+{
+  "logged_locations": [
+    {
+      "x": "50",
+      "y": "30",
+      "date": "2020-01-20",
+      "time" : "16:00:00",
+      "duration": "30"
+    }
+  ],
+  "reported_infections":[
+
+    {
+      "x": "50",
+      "y": "30",
+      "date": "2020-01-20",
+      "time" : "16:00:00",
+      "duration": "30"
+  },
+    {
+      "x": "50",
+      "y": "30",
+      "date": "2020-12-15",
+      "time" : "08:00:00",
+      "duration": "15"
+    }
+  ],
+  "users": [
+    {
+    "first_name": "test",
+    "surname": "user",
+    "username": "testuser",
+    "password": "testPassword123"
+  },
+    {
+      "first_name": "test1",
+      "surname": "user1",
+      "username": "testuser1",
+      "password": "testPassword1231"
+    }
+  ]
+
+}

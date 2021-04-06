@@ -1,0 +1,118 @@
+/* The side navigation menu */
+.sidenav{
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 10;
+    top: 10%;
+    left: 0%;
+    background-color:rgb(173, 185, 202) ;
+    overflow-x: auto;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding-top: 5%;
+    height: 5%;
+    width: 100%;
+    text-decoration: none;
+    text-align:center;
+    font-size: 1.5vw;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidenav buffer{
+    padding-top: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+    background-color: rgb(132, 151, 176);
+}
+
+#title_container {
+    background-color: rgb(173, 185, 202);
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top:0%;
+    left: 0%;
+}
+#title {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    text-shadow: 1px 1px 2px rgb(92, 99, 110);
+}
+
+/* Make all content to the right of the sidenav and below title*/
+.wrapper_content{
+    height: 90%;
+    width: 85%;
+    position: fixed;
+    z-index: 10;
+    top: 10%;
+    left: 15%;
+    overflow-x: auto;
+}
+
+.full_wrapper_content{
+    height: 90%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 10%;
+    overflow-x: auto;
+}
+
+.watermark{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Formatting for all buttons on the site */
+button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 48%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    z-index: 10;
+}
+
+::placeholder {
+    color: black;
+}
+
