@@ -1,4 +1,17 @@
 <html>
+
+<script>
+    function add_red_marker(x, y){
+        // TODO: add_red_marker
+    }
+    function add_black_marker(x, y){
+        // TODO: add_black_marker
+    }
+    function get_marker_info(x,y){
+        // TODO: get_marker_info
+    }
+</script>
+
 <head>
     <title>COVID - 19 Contact Tracing</title>
     <link rel="stylesheet" href="styles/_layout.css">
