@@ -64,7 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $password = $user["password"];
             // TODO: Use password_verify() for security reasons
             if($password == $input_password){
-                $_SESSION['username'] = $username;
+                $_SESSION["username"] = $username;
+                $_SESSION["fname"] = $user["first_name"];
                 header('Location: ./home.php');
             }
         }
