@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!(isset($_SESSION["fname"]))){
+    header('Location: ./login.php');
+}
+?>
+
 <html>
 <head>
     <title>COVID - 19 Contact Tracing</title>
