@@ -23,6 +23,17 @@
 <div class = wrapper_content>
     <p id="heading">Status</p>
     <hr class="horizontal_line">
+    <img class = "map" id="map"src="images/exeter.jpg">
+    <div class="left_home_wrapper">
+        <p id="welcome_text"> Hi <?php echo $name?>, you might have had a
+            connection to the infected person at the location shown in red</p>
+        <!-- TODO: Make map info show at bottom -->
+        <p id="map_info_text">Click on the marker to see details about the infection</p>
+    </div>
 </div>
 
 </body>
+
+</html>
+
+<!-- TODO: PHP for checking if user has been in contact->
