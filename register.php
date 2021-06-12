@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles/_layout.css">
     <link rel="stylesheet" href="styles/login_register.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -48,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = $_POST['input_fname'];
     $sname = $_POST['input_sname'];
     $username = $_POST['input_username'];
-    $password = $_POST['input_password'];
-    // TODO: Use password_hash() to store password securely
+    $password = password_hash($_POST['input_password'], PASSWORD_DEFAULT);
+    console_log($password);
 
     $db = file_get_contents("data.json");
     $data = json_decode($db, true);

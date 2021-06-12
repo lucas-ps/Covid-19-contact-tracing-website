@@ -22,8 +22,6 @@
                     <input type="text" autocomplete="off" placeholder="Username" name="input_username" required>
                     <input type="password" placeholder="Password" name="input_password" required>
 
-                    <!-- TODO: validate password -->
-
                     <br><br><br>
 
                     <button style="float: left;" type="submit" value="Submit">Login</button>
@@ -63,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if($username == $input_username){
             $password = $user["password"];
             // TODO: Use password_verify() for security reasons
-            if($password == $input_password){
+            if(password_verify($input_password, $password)){
                 $_SESSION["username"] = $username;
                 $_SESSION["fname"] = $user["first_name"];
                 header('Location: ./home.php');
